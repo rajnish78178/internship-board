@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EdVyro - Internship Board</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <h1>Find Your Internship</h1>
+  <p>9 open opportunities • Remote & On-site</p>
+</header>
+
+<main>
+  <section class="controls" aria-label="Search and filter internships">
+    <div>
+      <label for="search">Search internships</label>
+      <input type="search" id="search" placeholder="Search by role, company..." autocomplete="off">
+    </div>
+    <div>
+      <label for="domain">Domain</label>
+      <select id="domain">
+        <option value="all">All Domains</option>
+        <option value="Development">Development</option>
+        <option value="Design">Design</option>
+        <option value="Marketing">Marketing</option>
+        <option value="Data">Data</option>
+      </select>
+    </div>
+    <div>
+      <label for="type">Type</label>
+      <select id="type">
+        <option value="all">All Types</option>
+        <option value="Remote">Remote</option>
+        <option value="On-site">On-site</option>
+        <option value="Hybrid">Hybrid</option>
+      </select>
+    </div>
+    <button id="resetBtn">Reset Filters</button>
+  </section>
+
+  <p id="resultCount" aria-live="polite"></p>
+  <div id="board" class="grid" role="list"></div>
+
+  <div id="emptyState" class="empty" hidden>
+    <h2>No internships found</h2>
+    <p>Try different search or clear filters.</p>
+    <button id="clearBtn">Clear All Filters</button>
+  </div>
+</main>
+
+<footer><p>Built for EdVyro Task 02 • HTML, CSS, JS • No Framework</p></footer>
+<script src="app.js"></script>
+</body>
+</html>
